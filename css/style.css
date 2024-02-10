@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+a:active {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/главная\ страница\ 2.png) 0 0/cover no-repeat;
+}
+
+.navigation {
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  list-style: none;
+}
+
+.main-txt-block {
+  text-align: center;
+  margin-top: 75px;
+}
+.main-txt-block .main-txt-block__txt {
+  font-size: 80px;
+  font-family: "Forum", serif;
+}
+.main-txt-block .main-txt-block__txt--style {
+  margin-top: 45px;
+  font-size: 32px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+}
+
+.footer-p1 {
+  padding: 45px 0px 45px 0px;
+  text-align: center;
+  font-size: 32px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+}
+.footer-p1 .footer-p1__btn {
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-image: url(../img/btn.png);
+}
