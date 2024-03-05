@@ -28,8 +28,8 @@ a{
 // -------------------
 
 // Подключения шрифтов и переменные на сайте
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Nunito:wght@300;400;500&display=swap');
-
+// @import url('https://fonts.googleapis.com/css2?family=Forum&family=Nunito:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 // -------------------
 
 // Обёртки
@@ -45,8 +45,8 @@ html{
     body{
         color: $color-text;
         font-size: $main-fz;
-        // font-family: 'Forum', serif;
-        font-family: 'Nunito', sans-serif;
+        font-family: 'Forum', serif;
+        // font-family: 'Nunito', sans-serif;
         font-weight: 400;
     }
 }
@@ -64,6 +64,7 @@ html{
     align-items: center;
     gap: 150px;
     list-style: none;
+    font-family: 'Nunito', sans-serif;
 }
 
 .main-txt-block{
@@ -142,3 +143,104 @@ html{
     100% { background-position: 0 0; }
 }
  }
+
+// Конец главной страницы ---------------------------------------------------------------------------------------
+
+.bg-main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #01000C;
+}
+
+.container-main{
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 80px;
+    margin: 90px 0;
+}
+
+.variation-connects{
+    .Nunito-light{
+        font-family: 'Nunito', sans-serif;
+        font-weight: 300;
+        font-size: 32px;
+        font-style: normal;
+    }
+}
+
+.Nunito-italic{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.Forum-regular{
+    font-size: 36px;
+}
+
+.Nunito-light{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    // font-style: italic;
+
+    .Nunito-bold-italic{
+        font-weight: 700;
+        font-style: italic;
+    }
+}
+
+
+.code-coren{
+    margin: 105px 0px;
+    width: 685px;
+    height: 534px;
+    padding: 35px 25px;
+    background: url(../img/blur.png) no-repeat center center;
+    box-shadow: 0px 0px 100px 60px rgba(68, 8, 144, 0.44);
+    
+    border: solid white 1px;
+    border-radius: 50px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+}
+
+.code-coren-v2{
+    margin: 105px 0px;
+    width: 1100px;
+    height: 825px;
+    padding: 35px 25px;
+
+    background: url(../img/blur\ 2.png) no-repeat center center;
+    box-shadow: 0px 0px 100px 60px rgba(68, 8, 144, 0.44);
+
+    border: solid white 1px;
+    border-radius: 50px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+}
+
+.btn-download{
+    margin-top: 25px;
+    margin-bottom: 75px;
+    padding: 15px 40px;
+    border: solid 1px white;
+    border-radius: 25px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    text-decoration: underline;
+}
