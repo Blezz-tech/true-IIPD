@@ -29,7 +29,7 @@
 // });
 
 const lessons = {
-    "Подключение": `
+    "lesson1": `
 
 # Подключение
 
@@ -125,12 +125,12 @@ _Для начала работы с Bootstrap, вы можете использ
 
 [Скачать исходный код](#)
 
-`, "Сетка": `
+`, "lesson2": `
 
-`, "Настройка": `
+`, "lesson3": `
 
 
-`, "Компоненты": `
+`, "lesson4": `
 
 
 `
@@ -138,9 +138,22 @@ _Для начала работы с Bootstrap, вы можете использ
 
 
 
+const content = document.querySelector('main'),
+    lesson1 = document.querySelector('#lesson-1'),
+    lesson2 = document.querySelector('#lesson-2'),
+    lesson3 = document.querySelector('#lesson-3'),
+    lesson4 = document.querySelector('#lesson-4');
 
+render('lesson1');
 
-const content = document.querySelector('main');
+lesson1.addEventListener('click', (e) => { render('lesson1'); });
+lesson2.addEventListener('click', (e) => { render('lesson2'); });
+lesson3.addEventListener('click', (e) => { render('lesson3'); });
+lesson4.addEventListener('click', (e) => { render('lesson4'); });
 
-const commits = lessons['Подключение'];
-content.innerHTML = md.render(commits);
+function render(name) {
+    content.innerHTML = '';
+    const commits = lessons[name];
+    content.innerHTML = md.render(commits);
+    Rainbow.color(() => console.log('Новые блоки с кодом теперь подсвечены!'));
+}

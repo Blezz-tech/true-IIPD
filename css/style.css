@@ -23,19 +23,38 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 20px !important;
+    font-family: Forum;
+    font-size: 24px !important;
+    color: white !important;
+}
+
+ul,
+ol,
+li,
+main>p,
+a {
+    color: white !important;
 }
 
 p {
     font-size: 20px;
+    font-weight: lighter;
 }
 
 pre {
-    margin: 3rem 0 !important;
+    margin: 6rem 0 !important;
     padding: 2.4rem 2rem;
-    background-color: rgba(68, 8, 144, 0.3) !important;
+    background-color: rgba(68, 8, 144, 0.25) !important;
     background: none;
-    box-shadow: 0px 0px 200px 60px rgba(68, 8, 144, 0.44);
+    box-shadow: 0px 0px 20rem 2rem rgba(68, 8, 144, 0.44);
     border: solid white 1px;
     border-radius: 1rem;
+}
+
+code {
+    font-size: 21px !important;
+}
+
+strong {
+    font-weight: bold !important;
 }
