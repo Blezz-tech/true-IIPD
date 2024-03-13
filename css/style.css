@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -11,10 +12,12 @@ a {
   text-decoration: none;
   color: #FFFFFF;
 }
+
 a:active {
   text-decoration: none;
   color: #FFFFFF;
 }
+
 a:hover {
   text-decoration: none;
   color: #FFFFFF;
@@ -28,6 +31,7 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+
 html body {
   color: #FFFFFF;
   font-size: 32px;
@@ -55,10 +59,12 @@ html body {
   text-align: center;
   margin-top: 75px;
 }
+
 .main-txt-block .main-txt-block__txt {
   font-size: 80px;
   font-family: "Forum", serif;
 }
+
 .main-txt-block .main-txt-block__txt--style {
   margin-top: 45px;
   font-size: 32px;
@@ -73,6 +79,7 @@ html body {
   font-family: "Nunito", sans-serif;
   font-weight: 500;
 }
+
 .footer-p1 .footer-p1__btn {
   border-radius: 30px;
   padding: 15px 30px;
@@ -80,6 +87,7 @@ html body {
   position: relative;
   z-index: 0;
 }
+
 .footer-p1 .footer-p1__btn:before {
   content: "";
   background: linear-gradient(45deg, rgb(84, 40, 135), #61008e, #bd59f6, #4c2373, #2b2155, #8d1f93, #7a00ff, #ff00c8, #6a1fcb);
@@ -96,9 +104,11 @@ html body {
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
+
 .footer-p1 .footer-p1__btn:hover:before {
   opacity: 1;
 }
+
 .footer-p1 .footer-p1__btn:after {
   z-index: -1;
   content: "";
@@ -110,13 +120,16 @@ html body {
   top: 0;
   border-radius: 10px;
 }
+
 @keyframes glowing {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }
@@ -163,6 +176,7 @@ html body {
   font-weight: 300;
   font-size: 28px;
 }
+
 .Nunito-light .Nunito-bold-italic {
   font-weight: 700;
   font-style: italic;
