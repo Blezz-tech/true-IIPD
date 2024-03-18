@@ -28,6 +28,12 @@ h6 {
     color: white !important;
 }
 
+h1 {
+    margin-top: 2rem;
+    font-size: 2rem !important;
+    margin-bottom: 2.5rem;
+}
+
 ul,
 ol,
 li,
@@ -89,7 +95,7 @@ main>h1>em {
 }
 
 #logo {
-    position:absolute;
+    position: absolute;
     top: 24px;
     left: calc(50vw - 175px/2);
 }
@@ -97,4 +103,3 @@ main>h1>em {
 .navbar-nav {
     height: 175px;
 }
-
