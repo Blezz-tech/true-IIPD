@@ -85,7 +85,7 @@ main>p>img {
 }
 
 #logo {
-    position:fixed;
+    position:absolute;
     top: 24px;
     left: calc(50vw - 175px/2);
 }
