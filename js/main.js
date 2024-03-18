@@ -302,6 +302,373 @@ padding для управления пространством между ним
 
 `, "lesson3": `
 
+# Цвета
+
+Изменить цвет текста можно с помощью цветных утилит (классов).
+При необходимости изменения цвета ссылки, используйте
+вспомогательные классы .link-*, которые имеют состояния :hover и :focus.
+
+Пример цветовых утилит .text-* , сгенерированных из исходной карты Sass $theme-colors: 
+
+![](./img/lesson/3/img001.png)
+
+![](./img/lesson/3/img002.png)
+
+## Интервал
+
+Bootstrap включает в себя широкий набор сокращенных вспомогательных классов полей,
+отступов и разрывов для изменения внешнего вида элементов.
+
+## Поля и отступы 
+
+Присваивайте удобные для восприятия значения margin или padding элементу или
+подмножеству его сторон с помощью сокращенных классов.
+
+Включает поддержку отдельных свойств, всех свойств, а также свойств по вертикали
+и горизонтали. Классы строятся из карты Sass по умолчанию в диапазоне от .25rem до 3rem.
+
+## Примечание
+
+Утилиты интервалов, которые применяются ко всем контрольным точкам, от xs до xxl, не имеют в них аббревиатуры контрольные точки.  Это связано с тем, что эти классы применяются начиная с min-width: 0 и выше и поэтому не связаны медиа-запросом.  Остальные контрольные точки, однако, содержат аббревиатуру контрольные точки. 
+
+Классы именуются в формате {property}{sides}-{size} для xs и {property}{sides}-{breakpoint}-{size} для sm, md, lg, xl и xxl.
+Где свойство - одно из:
+
+- m - для классов, которые устанавливают margin
+- p - для классов, которые устанавливают padding
+
+Где стороны - одна из:
+
+- t - для классов, которые устанавливают margin-top или padding-top
+- b - для классов, которые устанавливают margin-bottom или padding-bottom
+- s - (start) для классов, которые устанавливают margin-left или padding-left в LTR, margin-right или padding-right в RTL
+- e - (end) для классов, которые устанавливают margin-right или padding-right в LTR, margin-left или padding-left в RTL
+- x - для классов, которые устанавливают оба *-left и *-right
+- y - для классов, которые устанавливают оба *-top и *-bottom
+- blank - для классов, которые устанавливают a margin или padding со всех 4 сторон элемента
+
+Где размер - один из:
+
+- 0 - или классы, устраняющие margin или padding установив его на 0
+- 1 - (по умолчанию) для классов, которые устанавливают the margin или padding равным $spacer * .25
+- 2 - (по умолчанию) для классов, которые устанавливают the margin или padding равным $spacer * .5
+- 3 - (по умолчанию) для классов, которые устанавливают the margin или padding равным $spacer
+- 4 - (по умолчанию) для классов, которые устанавливают the margin или padding равным $spacer * 1.5
+- 5 - (по умолчанию) для классов, которые устанавливают the margin или padding равным $spacer * 3
+- auto - для классов, которые устанавливают margin равным авто 
+
+(Есть возиожность использовать другие размеры, добавив записи в переменную Sass map $spacers.)
+
+
+Несколько примеров этих классов:
+
+![](./img/lesson/3/img003.png)
+
+Горизонтальное центрирование 
+
+Bootstrap также включает класс .mx-auto для горизонтального центрирования содержимого
+уровня блока фиксированной ширины, то есть содержимого, имеющего набор display: block
+и width, путем установки горизонтальных полей на auto.
+
+![](./img/lesson/3/img004.png)
+
+## Навигационная панель
+
+Навигационная панель, также известная как "навбар" (Navbar), в Bootstrap - это компонент,
+предназначенный для создания стилизованной панели навигации на странице. Навбар обычно
+располагается в верхней части страницы и содержит ссылки или кнопки для навигации по
+сайту или приложению.
+
+Навбар в Bootstrap предлагает множество функций и настроек, позволяющих легко создавать
+адаптивные и интерактивные панели навигации. Обычно содержит логотип, различные элементы
+меню, выпадающие списки, формы поиска, кнопки и многое другое.
+
+Пример всех подкомпонентов, включенных в адаптивную навигационную панель,
+которая автоматически сворачивается в контрольной точке lg (большая).
+
+\`\`\`html
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Прокрутка навбара</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ссылка</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ссылка
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Действие</a></li>
+            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Ссылка</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+</nav>
+\`\`\`
+
+![](./img/lesson/3/img005.png)
+
+![](./img/lesson/3/img006.png)
+
+## Карточки
+
+О карточках
+
+Карточка - это гибкий и расширяемый контейнер содержимого.
+Включает опции заголовков и футеров, широкий спектр контента,
+цвета бэкграунда и опции отображения. Карточки заменяют старые
+панели, углубления и эскизы. Функциональность, аналогичная этим
+компонентам, доступна в виде классов-модификаторов для карточек.
+
+## Пример
+
+Карточки созданы с применением как можно более меньшего количества
+кода и стилей, но они все же имеют множество инструментов для настройки
+и контроля.  Легко выравниваются и сочетаются с другими компонентами
+Bootstrap, т.к. они созданы с помощью flex-box. По умолчанию не имеют
+margin, поэтому при необходимости используйте интервал.
+
+Карточки не имеют фиксированной ширины по умолчанию, так что
+будут автоматически заполнять полную ширину родительского элемента.
+Это настраивается с помощью параметров размера. Пример базовой карточки
+фиксированной ширины со смешанным содержимым:
+
+\`\`\`html
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Заголовок карточки</h5>
+    <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карты.</p>
+    <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
+  </div>
+</div>
+\`\`\`
+
+![](./img/lesson/3/img007.png)
+
+## Кнопки
+
+Bootstrap имеет базовый класс .btn, который устанавливает основные стили,
+такие как отступы и выравнивание содержимого. По умолчанию элементы управления
+.btn имеют прозрачную рамку, цвет фона и не имеют каких-либо явных стилей
+фокуса и наведения.
+
+\`\`\`html
+<button type="button" class="btn">Базовый класс</button>
+\`\`\`
+
+### Варианты кнопок
+
+Bootstrap включает в себя несколько вариантов кнопок,
+каждый из которых используется для разных целей.
+
+\`\`\`html
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary<button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>
+\`\`\`
+
+![](./img/lesson/3/img008.png)
+
+## Карусель
+
+Компонент слайд-шоу для цикличного повторения элементов -
+карусель изображений или текстовых слайдов.
+
+Обратите внимание на предыдущий/следующий элементы управления.
+
+Рекомендуется использовать элементы <button>, но также можно
+использовать элементы <a> с role="button". Пример карусели с тремя слайдами:
+
+\`\`\`html
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleFade"
+    data-bs-slide="prev"
+    >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleFade"
+    data-bs-slide="next"
+    >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+\`\`\`
+
+![](./img/lesson/3/img009.png)
+
+Карусели не нормализуют автоматически размеры слайдов. Таким образом,
+может потребоваться использовать дополнительные утилиты или пользовательские
+стили для соответствующего размера содержимого.
+
+Необходимо добавить класс .active к одному из слайдов, иначе карусель не будет
+видна. Элементы управления и индикаторы должны иметь атрибут data-bs-target
+(или href для ссылок), который соответствует id элемента .carousel.
+
+## Формы
+
+В Bootstrap, "формы" (Forms) - это компонент, который позволяет создавать
+стилизованные и интерактивные формы на странице. Формы в Bootstrap
+предоставляют удобные средства для сбора информации от пользователей,
+таких как ввод текста, выбор опций, загрузка файлов и отправка данных
+на сервер.
+
+Bootstrap предлагает множество классов и стилей для создания различных
+типов форм. Компоненты форм включают в себя текстовые поля, выпадающие
+списки, флажки, переключатели, кнопки и другие элементы, которые могут
+быть комбинированы для создания сложных форм.
+
+Пример использования форм в Bootstrap:
+
+\`\`\`html
+<form>
+    <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text"
+            class="form-control"
+            id="name"
+            placeholder="Введите имя">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email"
+            class="form-control"
+            id="email"
+            placeholder="Введите email">
+    </div>
+    <div class="form-group">
+        <label for="message">Сообщение</label>
+        <textarea class="form-control"
+            id="message"
+            rows="3"
+            placeholder="Введите сообщение">
+        </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+\`\`\`
+
+В примере создается простая форма с тремя полями ввода (имя, email
+и сообщение) и кнопкой отправки. Классы Bootstrap, такие как
+"form-group", "form-control" и "btn", используются для определения
+стилей и расположения элементов формы.
+
+Bootstrap предлагает дополнительные классы и компоненты для валидации
+форм, создания групп элементов, добавления дополнительных опций и многое
+другое. Это позволяет создавать формы, которые соответствуют требованиям
+дизайна и функциональности проекта.
+
+Использование форм в Bootstrap упрощает процесс создания стилизованных
+и отзывчивых форм на страницах, обеспечивая удобство использования
+и хороший пользовательский опыт.
+
+![](./img/lesson/3/img010.png)
+
+## Прогрессбар
+
+Прогрессбар - это графический элемент, который позволяет отображать
+процент выполнения какой-либо задачи или процесса. Представляет
+собой горизонтальную полосу, заполненную цветом в зависимости
+от уровня выполнения задачи. Прогрессбары в Bootstrap легко
+настраиваются с помощью классов CSS и JavaScript для определения
+цвета, ширины, анимации и других параметров. Они часто
+используются для отображения прогресса загрузки страницы,
+отправки формы или выполнения других длительных операций.
+
+Компоненты Progress состоят из двух HTML-элементов,
+CSS для установки ширины и нескольких атрибутов.
+Есть возможность складывать индикаторы выполнения,
+анимировать их, и использовать текстовые метки.
+
+- Используем .progress в качестве оболочки, чтобы указать максимальное значение индикатора выполнения.
+- Оболочке .progress также требуются атрибуты role="progress" и aria, чтобы сделать ее доступной, включая доступное имя (используя aria-label, aria-labelledby или подобное).
+- Используем внутренний .progress-bar исключительно для визуальной панели и метки. .progress-bar требует встроенного стиля, служебного класса или пользовательского CSS для установки его ширины.
+- Специальный класс .progress-stacked для создания нескольких индикаторов выполнения.
+
+\`\`\`html
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 0%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 25%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 50%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 75%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width: 100%"></div>
+</div>
+\`\`\`
+
+![](./img/lesson/3/img011.png)
+
+## Фон
+
+Фоновые служебные классы ипользуются,
+чтобы изменить внешний вид отдельных индикаторов выполнения.
+
+\`\`\`html
+<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-success" style="width: 25%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-info" style="width: 50%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Пример предупреждения" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-warning" style="width: 75%"></div>
+</div>
+<div class="progress" role="progressbar" aria-label="Пример опасности" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-danger" style="width: 100%"></div>
+</div>
+\`\`\`
+
+![](./img/lesson/3/img012.png)
+
 
 `, "lesson4": `
 
