@@ -84,6 +84,10 @@ main>p>img {
     margin: 3rem 0;
 }
 
+main>h1>em {
+    visibility: hidden;
+}
+
 #logo {
     position:absolute;
     top: 24px;
@@ -93,3 +97,4 @@ main>p>img {
 .navbar-nav {
     height: 175px;
 }
+
